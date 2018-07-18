@@ -16,7 +16,7 @@ hpc$Time <- strptime(hpc$Time, format = "%H:%M:%S")
 hpc$Time <- format(hpc$Time, "%H:%M:%S")
 hpc$Date <- as.Date(hpc$Date, format = "%d/%m/%Y")
 
-#as.POSIXct(paste(hpc$Date, hpc$Time), format = "%d/%m/%Y %H:%M:%S")
+# Merge date and time
 hpc["Timestamp"] <- as.POSIXct(paste(hpc$Date, hpc$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Open png graphic device
